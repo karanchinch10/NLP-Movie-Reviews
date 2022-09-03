@@ -1,6 +1,12 @@
 import streamlit as st
 import numpy as np
 import nltk
+# download some library which hold in nltk only first time
+nltk.download('punkt') #punctuation
+nltk.download('wordnet')#for lemmatization
+nltk.download('stopwords')#for stopwords corpus
+nltk.download('omw-1.4')
+
 import numpy as np
 import pandas as pd
 from nltk.corpus import stopwords
