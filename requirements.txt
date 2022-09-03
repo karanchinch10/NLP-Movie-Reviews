@@ -12,6 +12,10 @@ scikit-learn==1.1.2
 scipy==1.9.1
 streamlit==1.12.2
 tensorflow==2.9.1
-
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 
