@@ -146,7 +146,8 @@ st.title("Sentiment Analysis Movie Reviews")
 
 
 
-text = st.text_input("enter the text", key="text")
+
+text = st.text_area("enter the text", key="text")
 
 def clear_text():
     st.session_state["text"] = ""
