@@ -167,7 +167,7 @@ if st.button('Predict'):
     padd_tok_text1 = pad_sequences(tok_text,  maxlen=295)
     #predict
     result=model.predict(padd_tok_text1)[0]
-    result=np.round(result[0][0],3)
+    result=np.round(result[0],3)
     #display
     st.write(result)
     #predict categ
