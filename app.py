@@ -145,7 +145,7 @@ def clean_text(text):
 st.title("Sentiment Analysis Movie Reviews")
 text = st.text_area("Enter the Review",key=1)
 if st.button("clear text"):
-    text=st.text_input('text', value='',key=1)
+    text=st.empty().text_input('text', value='',key=1)
 
 
 if st.button('Predict'):
