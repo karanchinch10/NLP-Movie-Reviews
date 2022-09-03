@@ -165,11 +165,11 @@ if st.button('Predict'):
     # 3. padding
     padd_tok_text1 = pad_sequences(tok_text,  maxlen=295)
     #predict
-    result=model.predict(padd_tok_text1)[0]
+    result=model.predict(padd_tok_text1)[0].round(4)
     #display
     st.write(result)
     #predict categ
     if result>0.5:
-        st.write("Positive 😊")
+        st.success("Positive 😊")
     else:
-        st.write("Negative 😔")
+        st.success("Negative 😔")
