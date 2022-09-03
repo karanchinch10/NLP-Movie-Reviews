@@ -143,20 +143,13 @@ def clean_text(text):
 
 st.title("Sentiment Analysis Movie Reviews")
 text = st.text_area("Enter the review", key="text")
+
 def clear_text():
     st.session_state["text"] = ""
-    
-left, right = st.beta_columns(2)
-with left:
-    st.button("clear text input", on_click=clear_text)
 
-    
-    
-#st.button("clear text input", on_click=clear_text)
+st.button("clear text input", on_click=clear_text)
 
 
-    
-with col
 if st.button('Predict'):
 
     # 1. preprocess
