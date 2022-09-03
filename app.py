@@ -147,6 +147,7 @@ st.title("Sentiment Analysis Movie Reviews")
 text = st.text_area("Enter the Review")
 if st.button("clear text"):
     text=""
+    return text
  
 
 
@@ -165,7 +166,8 @@ if st.button('Predict'):
     # 3. padding
     padd_tok_text1 = pad_sequences(tok_text,  maxlen=295)
     #predict
-    result=model.predict(padd_tok_text1)[0].round(4)
+    result=model.predict(padd_tok_text1)[0]
+    result=result.round(4)
     #display
     st.write(result)
     #predict categ
