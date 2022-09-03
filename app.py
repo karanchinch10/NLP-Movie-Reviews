@@ -146,8 +146,7 @@ st.title("Sentiment Analysis Movie Reviews")
 
 text = st.text_area("Enter the Review")
 if st.button("clear text"):
-    text=""
-    return text
+    text=st.empty()
  
 
 
