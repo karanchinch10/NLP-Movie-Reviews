@@ -141,19 +141,14 @@ def clean_text(text):
     return text
 
 
-
 st.title("Sentiment Analysis Movie Reviews")
-
-
-
-
 text = st.text_area("enter the text", key="text")
 
 def clear_text():
     st.session_state["text"] = ""
     
 st.button("clear text input", on_click=clear_text)
-st.write(text)    
+   
     
 
 if st.button('Predict'):
