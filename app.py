@@ -146,8 +146,8 @@ st.title("Sentiment Analysis Movie Reviews")
 
 text = st.text_area("Enter the Review")
 if st.button("clear text"):
-    text=text.replace(text,"")
-    text=st.text_area("Enter the Review")
+    text=""
+ 
 
 
 if st.button('Predict'):
