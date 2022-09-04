@@ -87,6 +87,8 @@ def decontraction(text):
     text = re.sub(r" u ", " you ", text)
 
     text = re.sub(r"n\'t", " not", text)
+    text = re.sub(r"no", " not", text)
+    text = re.sub(r"dont", " not", text)
     text = re.sub(r"n\'t've", " not have", text)
     text = re.sub(r"\'re", " are", text)
     text = re.sub(r"\'s", " is", text)
