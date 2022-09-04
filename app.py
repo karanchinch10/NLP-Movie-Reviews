@@ -146,7 +146,7 @@ text = st.text_area("Enter the review", key="text")
 def clear_text():
     st.session_state["text"] = ""
     
-col1,col2 = st.beta_columns(2)
+col1,col2 = st.columns(2)
 
 
 #st.button("clear text input", on_click=clear_text)
