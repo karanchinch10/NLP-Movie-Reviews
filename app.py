@@ -145,35 +145,36 @@ st.title("Sentiment Analysis Movie Reviews")
 text = st.text_area("Enter the review", key="text")
 def clear_text():
     st.session_state["text"] = ""
-    
-col1,col2 = st.columns(2)
-col1.button("P")
-col2.button("C")
-
-#st.button("clear text input", on_click=clear_text)
 
 
-if st.button('Predict'):
 
-    # 1. preprocess
-    text=remove_urls(text)
-    text=remove_emails(text)
-    text=remove_numbers(text)
-    text=remove_html(text)
-    text= decontraction(text)
-    text=clean_text(text)
-    text
+col1, col2 = st.columns(2)
+
+with col2:
+    st.button("clear text input", on_click=clear_text)
+
+with col1:
+    if st.button("predict"):
+
+            # 1. preprocess
+        text=remove_urls(text)
+        text=remove_emails(text)
+        text=remove_numbers(text)
+        text=remove_html(text)
+        text= decontraction(text)
+        text=clean_text(text)
+        text
     # 2. tokenize
-    tok_text = tok.texts_to_sequences([text])
+        tok_text = tok.texts_to_sequences([text])
     # 3. padding
-    padd_tok_text1 = pad_sequences(tok_text,  maxlen=295)
+        padd_tok_text1 = pad_sequences(tok_text,  maxlen=295)
     #predict
-    result=model.predict(padd_tok_text1)[0]
-    result=np.round(result[0],3)
+        result=model.predict(padd_tok_text1)[0]
+        result=np.round(result[0],3)
     #display
-    st.write(result)
+        st.write(result)
     #predict categ
-    if result>0.5:
-        st.success("Positive 😊")
-    else:
-        st.success("Negative 😔")
+        if result>0.5:
+            st.success("Positive 😊")
+        else:
+            st.success("Negative 😔")
