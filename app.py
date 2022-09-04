@@ -143,11 +143,13 @@ def clean_text(text):
 
 st.title("Sentiment Analysis Movie Reviews")
 text = st.text_area("Enter the review", key="text")
-
 def clear_text():
     st.session_state["text"] = ""
+    
+col1,col2 = st.beta_columns(2)
 
-st.button("clear text input", on_click=clear_text)
+
+#st.button("clear text input", on_click=clear_text)
 
 
 if st.button('Predict'):
