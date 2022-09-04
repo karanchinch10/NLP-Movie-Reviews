@@ -150,10 +150,10 @@ def clear_text():
 
 col1, col2 = st.columns(2)
 
-with col2:
+with col1:
     st.button("clear text input", on_click=clear_text)
 
-with col1:
+with col2:
     if st.button("predict"):
 
             # 1. preprocess
